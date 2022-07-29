@@ -6,6 +6,8 @@ use App\Http\Controllers\RentalController;
 use App\Http\Controllers\NakuruController;
 use App\Http\Controllers\FallbackController;
 use App\Http\Controllers\ArrayController;
+use App\Http\Controllers\BootstrapController;
+use App\Http\Controllers\StudentController;
 /*
 GET- Request a resource
 Post- Create a resource
@@ -31,6 +33,14 @@ Route::get('nakuru/{id}/{name}' , [NakuruController::class, 'show_again'])
 Route::get('form',[NakuruController::class,'create'])->name('form.create');
 Route::post('form',[NakuruController::class,'store'])->name('form.store');
 Route::get('array',[ArrayController::class,'create']);
+Route::get('bootstrap',[BootstrapController::class,'show']);
+Route::post('bootstrap',[BootstrapController::class,'store'])->name('bootstrap.store');
+Route::get('bootstrapview',[BootstrapController::class,'display']);
+Route::get('delete/{id}',[BootstrapController::class,'delete']);
+Route::get('edit/{id}',[BootstrapController::class,'edit']);
+Route::post('edit/',[BootstrapController::class,'update']);
+Route::resource('students',StudentController::class); 
+
 //Route::get('form',[NakuruController::class,'redirect']);
 //POST
 //Route::get('nakuru/create' , [NakuruController::class, 'create']);

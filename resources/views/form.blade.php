@@ -1,8 +1,11 @@
 
+<head>
 
-
-
-    <form method="post" action="{{route('form.store')}}"  >
+<title>Form</title>
+</head>
+  <body>
+    <h1>Form Registration</h1>
+<form method="post" action="{{route('form.store')}}"  >
     @csrf
 
         <input name="name" placeholder="name">
@@ -14,4 +17,4 @@
         <button type="submit">Save</button>
         
 </form>
-
+</body>

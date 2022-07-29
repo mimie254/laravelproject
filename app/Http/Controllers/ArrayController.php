@@ -12,4 +12,8 @@ class ArrayController extends Controller
    $shoes=[['heels','five','new'],['jordans','eight','stunning'],['flats','ten','modern'],['airforce','six','average'],['boots','seven','new']]; 
    return view ('array')->with('s',$shoes);
  }
+ public function show()
+ {
+  return view('bootstrap');
+ }
 }
